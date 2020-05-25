@@ -56,7 +56,7 @@ struct ContentView: View {
                 }
                 
                 Section(header: Text("Amount per person")) {
-                    Text("$\(totalPerPerson, specifier: "%.2f")")
+                    Text("$\(totalPerPerson.isNaN ? 0 : totalPerPerson, specifier: "%.2f")")
                 }
                 
                 Section(header: Text("Total amount for the check")) {
